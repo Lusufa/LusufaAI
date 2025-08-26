@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@import "tailwindcss";
+
+*{
+  font-family: "Outfit", sans-serif;
+}
+
+
+@theme {
+  --primary: #1a202c;
+  --secondary: #2d3748;
+  --accent: #4a5568;
+  --text: #a0aec0;
+  --background: #f7fafc;
+}
+
+.reset-tw * {
+  all: revert !important;
+  font-family: "Outfit", sans-serif !important; /* preserve font */
+}
+
+.cl-drawerRoot{
+  z-index:10;
+}
