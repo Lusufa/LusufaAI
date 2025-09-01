@@ -109,28 +109,28 @@ export const generateImage = async (req, res) => {
             });
         }
 
-        // ✅ Call ClipDrop API with JSON body
+    
         const { data } = await axios.post(
             "https://clipdrop-api.co/text-to-image/v1",
-            { prompt },  // <-- JSON payload
+            { prompt },  
             {
                 headers: {
                     "x-api-key": process.env.CLIPDROP_API_KEY,
-                    "Content-Type": "application/json", // <-- must be JSON
+                    "Content-Type": "application/json",
                 },
-                responseType: "arraybuffer", // receive image binary
+                responseType: "arraybuffer",
             }
         );
 
-        // ✅ Convert binary to base64
+    
         const base64Image = `data:image/png;base64,${Buffer.from(data).toString("base64")}`;
 
-        // ✅ Upload to Cloudinary
+
         const { secure_url } = await cloudinary.uploader.upload(base64Image, {
             resource_type: "image",
         });
 
-        // ✅ Save to DB
+
         await sql`
           INSERT INTO creations (user_id, prompt, content, type, publish) 
           VALUES (${userId}, ${prompt}, ${secure_url}, 'image', ${publish ?? false})
