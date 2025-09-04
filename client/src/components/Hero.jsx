@@ -12,14 +12,14 @@ const Hero = () => {
     > 
       <div className='max-w-2xl text-center mb-6 mx-auto'>
         <h1 className='text-3xl sm:text-5xl md:text-6xl 2xl:text-7xl font-semibold leading-[1.2] text-primary'>
-          Create amazing content<br/> with{' '}
+          Create your imagination<br/> with{' '}
           <motion.span
             className='bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-pink-300'
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 4, ease: "easeOut", repeat: Infinity, repeatType: "reverse" }}
           >
-            AI tools
+            LusufaAI
           </motion.span>
         </h1>
         <p className='mt-4 max-w-xs sm:max-w-lg 2xl:max-w-xl text-gray-600 text-sm sm:text-base mx-auto'>
