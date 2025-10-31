@@ -22,7 +22,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <h2 className="font-semibold text-gray-800 mb-5">Subscribe to our newsletter</h2>
+                <h2 className="font-semibold text-gray-800 mb-5">Subscribe to our LusufaAI</h2>
                 <div className="text-sm space-y-2">
                     <p>The latest Tools, articles, and resources, enrich your productivity.</p>
                     <div className="flex items-center gap-2 pt-4">
