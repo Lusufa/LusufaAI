@@ -19,7 +19,7 @@ const Hero = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 4, ease: "easeOut", repeat: Infinity, repeatType: "reverse" }}
           >
-            LusufaAI
+            ContentEase 
           </motion.span>
         </h1>
         <p className='mt-4 max-w-xs sm:max-w-lg 2xl:max-w-xl text-gray-600 text-sm sm:text-base mx-auto'>
